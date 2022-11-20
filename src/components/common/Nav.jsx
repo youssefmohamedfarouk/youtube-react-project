@@ -7,17 +7,17 @@ export default function Nav() {
       <article>
         <h1>
           <Link to="/">
-            Screen<span>Views</span>
+            <span>NotYoutube</span>
           </Link>
         </h1>
       </article>
       <nav>
         <ul>
           <li>
-            <Link to="/shows">All Shows</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/movies">All Movies</Link>
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </nav>
