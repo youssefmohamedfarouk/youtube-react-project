@@ -4,7 +4,7 @@ export default function VideoListing({vid, url}) {
     console.log(vid)
     return (
         <div >
-            <Link to={`/${vid.id}`} > 
+            <Link to={`/videos/${vid.id}`} > 
                 <img src={url} alt={`${vid.id}_img`} ></img>
             </Link>
             
