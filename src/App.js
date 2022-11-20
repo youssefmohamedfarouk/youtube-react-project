@@ -13,7 +13,7 @@ export default function App() {
         <Nav />
         <Routes>
           <Route element={<Home />} path="/" />
-          <Route element={<Video />} path="/:id" />
+          <Route element={<Video />} path="/videos/:id" />
         </Routes>
       </Router>
     </div>
