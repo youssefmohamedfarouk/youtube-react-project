@@ -1,4 +1,4 @@
-const URL = process.env.REACT_APP_API_KEY;
+// const URL = process.env.REACT_APP_API_KEY;
 
 export function getSearch() {
   return fetch(
@@ -12,3 +12,9 @@ export function getMostPopular() {
   ).then((response) => response.json());
 }
 
+export function getOneVideo(videoId) {
+  return fetch(
+    `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${process.env.REACT_APP_API_KEY}`
+
+  ).then((response) => response.json());
+}
