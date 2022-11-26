@@ -1,0 +1,11 @@
+div .VideoListing {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.videoDescrip {
+    flex: 1 0 20%; /* explanation below */
+      margin: 20px;
+
+}
