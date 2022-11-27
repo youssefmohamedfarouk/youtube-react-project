@@ -32,12 +32,12 @@ export default function Home() {
           Here is the Modal
         </Modal>
       </div>
-      <div className="VideoListing" >
+      <div className="video-container" >
         {popularVids.map((vid) => {
           return (
             <VideoListing
               vid={vid}
-              url={vid.snippet.thumbnails.high.url}
+              url={vid.snippet.thumbnails.medium.url}
               key={vid.id}
             />
           );
