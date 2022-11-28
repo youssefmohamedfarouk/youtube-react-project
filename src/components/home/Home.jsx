@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 // import YouTube from "react-youtube";
 import { getMostPopular } from "../../api/fetch";
 
