@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { getSearch } from "../../api/fetch";
 import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
 
 export default function SearchBar({ setVidsArray }) {
   const [textInput, setTextInput] = useState("");
   const navigate = useNavigate();
-  const { searchTerm } = useParams();
 
   function handleTextChange(event) {
     setTextInput(event.target.value);
@@ -21,7 +19,7 @@ export default function SearchBar({ setVidsArray }) {
       .catch((error) => {
         console.error(error);
       });
-    navigate(`/videos/${textInput}`);
+    navigate(`/searches/${textInput}`);
   }
 
   return (

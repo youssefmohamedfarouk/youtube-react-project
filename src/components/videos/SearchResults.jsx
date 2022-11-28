@@ -1,4 +1,3 @@
-import {useParams} from "react-router-dom";
 import VideoListing from "../videos/VideoListing";
 import "../videos/VideoListing.css";
 

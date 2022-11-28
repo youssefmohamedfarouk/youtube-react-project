@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Home from "./components/home/Home";
 import "./App.css";
@@ -23,7 +23,7 @@ export default function App() {
           <Route element={<Home vidsArray={vidsArray} setVidsArray={setVidsArray}/>} path="/" />
           <Route element={<About />} path="/about" />
           <Route element={<Video />} path="/videos/:id" />
-          <Route element={<SearchResults vidsArray={vidsArray} setVidsArray={setVidsArray}/>} path="/videos/:searchTerm" />
+          <Route element={<SearchResults vidsArray={vidsArray} setVidsArray={setVidsArray}/>} path="/searches/:searchTerm" />
         </Routes>
         <Footer/>
       </Router>
