@@ -5,7 +5,7 @@ import "./VideoListing.css";
 
 export default function VideoListing({ vid, url }) {
   const uploaded = moment(vid.snippet.publishedAt).fromNow();
-  console.log(vid)
+//   console.log(vid);
 
   return (
     <div className="videoDescrip">

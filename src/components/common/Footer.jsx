@@ -5,5 +5,5 @@ export default function Footer() {
     <footer>
       <p>NotYouTube. An application created by Carlos Mendoza & Youssef Mohamed Farouk.</p>
     </footer>
-  );
+  )
 }
