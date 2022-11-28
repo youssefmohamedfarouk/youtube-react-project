@@ -12,7 +12,7 @@ export default function Home({vidsArray, setVidsArray}) {
     setVidsArray([]);
     getMostPopular().then((data) => setVidsArray(data.items));
 
-  }, []);
+  }, [setVidsArray]);
 
   return (
     <>
