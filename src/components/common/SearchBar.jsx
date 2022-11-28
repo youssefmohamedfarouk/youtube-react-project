@@ -21,7 +21,7 @@ export default function SearchBar({ setVidsArray }) {
       //   .then(console.log)
       .catch((error) => {
         setShowModal(!showModal)
-        errorMessage = error;
+        errorMessage = error.message;
         console.error(error);
       });
     navigate(`/searches/${textInput}`);
