@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 // import YouTube from "react-youtube";
 import { getMostPopular } from "../../api/fetch";
-import SearchBar from "../common/SearchBar";
 
 import Modal from "../Modal/Modal";
 
@@ -12,7 +11,9 @@ export default function Home({vidsArray, setVidsArray}) {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
+    setVidsArray([]);
     getMostPopular().then((data) => setVidsArray(data.items));
+
   }, []);
 
   return (
