@@ -9,10 +9,10 @@ export default function Home({vidsArray, setVidsArray}) {
  
 
   useEffect(() => {
-    setVidsArray([]);
+    // setVidsArray([]);
     getMostPopular().then((data) => setVidsArray(data.items));
 
-  }, [setVidsArray]);
+  }, []);
 
   return (
     <>

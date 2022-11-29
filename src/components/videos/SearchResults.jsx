@@ -1,7 +1,27 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import VideoListing from "../videos/VideoListing";
+import { getSearch } from "../../api/fetch";
 import "../videos/VideoListing.css";
 
-export default function SearchResults({vidsArray}) {
+import Modal from "../Modal/Modal";
+
+export default function SearchResults({ vidsArray, setVidsArray }) {
+  let { searchTerm } = useParams();
+  const [showModal, setShowModal] = useState(false);
+  let errorMessage;
+
+  useEffect(() => {
+    getSearch(searchTerm)
+      .then((data) => setVidsArray(data.items))
+      //   .then(console.log)
+      .catch((error) => {
+        setShowModal(!showModal);
+        errorMessage = error.message;
+        console.error(error);
+      });
+  }, []);
+  
   return (
     <>
       {/* <div>
@@ -22,6 +42,11 @@ export default function SearchResults({vidsArray}) {
           );
         })}
       </div>
+      {showModal && (
+        <Modal showModal={showModal} setShowModal={setShowModal}>
+          {errorMessage}
+        </Modal>
+      )}
     </>
   );
 }
