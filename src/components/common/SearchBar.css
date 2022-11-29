@@ -1,0 +1,30 @@
+.input-wrapper {
+  margin-top: 82px;
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f6462b;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  box-shadow: 0.25rem 0.25rem 0rem #f0b2a8;
+}
+
+.input-wrapper * {
+  background: #f6462b;
+}
+
+input {
+  margin: 0 0.5rem 0 0.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f6462b;
+  color: white;
+  font-size: 1.2rem;
+}
+
+::placeholder {
+  color: #ffffff;
+}

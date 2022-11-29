@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./SearchBar.css";
+
 // import Modal from "../Modal/Modal";
 
 export default function SearchBar({ setVidsArray }) {
   const [textInput, setTextInput] = useState("");
   const navigate = useNavigate();
-//   const [showModal, setShowModal] = useState(false);
-//   let errorMessage;
+  //   const [showModal, setShowModal] = useState(false);
+  //   let errorMessage;
 
   function handleTextChange(event) {
     setTextInput(event.target.value);
@@ -27,11 +29,14 @@ export default function SearchBar({ setVidsArray }) {
   }
 
   return (
-    <div>
+    <div className="input-wrapper">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="search-input">Search: </label>
+        {/* <label htmlFor="search-input">Search: </label>
         <input type="text" id="search-input" onChange={handleTextChange} />
-        <button> Search </button>
+        <button> Search </button> */}
+        <div className="fa fa-search"></div>
+        <input type="text" placeholder="Search" onChange={handleTextChange}/>
+        <div className="fa fa-times"></div>
       </form>
       <div>
         {/* <button onClick={() => setShowModal(!showModal)}>Modal</button> */}
@@ -39,3 +44,9 @@ export default function SearchBar({ setVidsArray }) {
     </div>
   );
 }
+
+{/* <div class="input-wrapper">
+  <div class="fa fa-search"></div>
+  <input type="text" placeholder="Search" />
+  <div class="fa fa-times"></div>
+</div>; */}

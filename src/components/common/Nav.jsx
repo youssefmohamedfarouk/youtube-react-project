@@ -4,6 +4,7 @@ import "./Nav.css";
 export default function Nav() {
   return (
     <header>
+      <img src="/logo-transparent.png" alt="NotYoutube" />
       <article>
         <h1>
           <Link to="/">

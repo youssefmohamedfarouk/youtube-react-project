@@ -1,0 +1,8 @@
+.vid-container {
+    display: flex;
+}
+
+.youtube-vid {
+    margin: auto;
+    padding-top: 5%;
+}

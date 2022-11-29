@@ -1,17 +1,24 @@
 div .VideoListing {
-    display: flex;
-    flex-wrap: wrap;
-
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .videoDescrip {
-    flex: 1 0 20%; /* explanation below */
-      margin: 20px;
-
+  flex: 1 0 20%; /* explanation below */
+  margin: 20px;
 }
 
 .video-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(13, 1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.videoDescrip:hover {
+    text-decoration: underline;
 }
