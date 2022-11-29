@@ -11,18 +11,19 @@ import "./Video.css";
 export default function Video() {
   const [videoObj, setVideoObj] = useState({});
   const { id } = useParams();
-
-
-//   const uploaded = moment(video.snippet.publishedAt).fromNow();
-
+  const formatter = Intl.NumberFormat('en', { notation: 'compact' });
 
   //   console.log(id);
   useEffect(() => {
-    getOneVideo(id).then((response) => {
+    getOneVideo(id)
+      .then((response) => {
         console.log(response);
-      setVideoObj(response);
-      console.log(videoObj);
-    }).then(console.log(videoObj))
+        setVideoObj(response);
+        // setUploaded(response.items[0].snippet.publishedAt)
+        // console.log(videoObj);
+      })
+      .then(console.log(videoObj))
+      .catch((e) => console.error(e));
   }, []);
 
   return (
@@ -33,11 +34,15 @@ export default function Video() {
         className="youtube-vid"
       />
       <div>
-        {/* <h3>{video.items[0].snippet.title}</h3> */}
+        <h3>{videoObj.items && videoObj.items[0].snippet.title}</h3>
+        <p>{videoObj.items && videoObj.items[0].snippet.channelTitle}</p>
+        <p>
+          {videoObj.items && formatter.format(videoObj.items[0].statistics.viewCount)} views •{" "}
+          {videoObj.items &&
+            moment(videoObj.items[0].snippet.publishedAt).fromNow()}
+        </p>
       </div>
-      {/* <p>
-        {video} •
-      </p> */}
+      <div></div>
     </div>
   );
 }

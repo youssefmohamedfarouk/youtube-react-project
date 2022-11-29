@@ -1,8 +1,13 @@
 .vid-container {
-    display: flex;
+    display: grid;
+    grid-template-rows: 2fr 0.5fr 0.5fr;
+}
+
+.vid-container * {
+    margin: auto;
+    padding: 5px;
 }
 
 .youtube-vid {
-    margin: auto;
-    padding-top: 5%;
+    margin-top: 1%;
 }
