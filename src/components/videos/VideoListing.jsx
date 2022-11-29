@@ -9,7 +9,7 @@ export default function VideoListing({ vid, url }) {
 
   return (
     <div className="videoDescrip">
-      <Link to={`/videos/${vid.id}`}>
+      <Link to={`/videos/${vid.id.videoId || vid.id}`}>
         <img src={url} alt={`${vid.id}_img`}></img>
         <div>
           <h3>{vid.snippet.title}</h3>

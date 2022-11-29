@@ -13,15 +13,15 @@ export default function SearchResults({ vidsArray, setVidsArray }) {
 
   useEffect(() => {
     getSearch(searchTerm)
-      .then((data) => setVidsArray(data.items))
+      .then((data) => setVidsArray(data.items.filter((vid) => vid.id.kind === "youtube#video")))
       //   .then(console.log)
       .catch((error) => {
         setShowModal(!showModal);
         errorMessage = error.message;
         console.error(error);
       });
-  }, []);
-  
+  }, [searchTerm]);
+
   return (
     <>
       {/* <div>
