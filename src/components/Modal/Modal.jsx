@@ -1,7 +1,7 @@
 import "./modal.css";
 import reactDom from "react-dom";
 
-export default function Modal({ showModal, setShowModal, children }) {
+export default function Modal({ showModal, setShowModal, errorMessage }) {
   if (!showModal) {
     return null;
   }
@@ -26,8 +26,8 @@ export default function Modal({ showModal, setShowModal, children }) {
           
           <p className="closeButton" onClick={() => setShowModal(!showModal)}> X </p>
             <div className="modalContent">
-                <p>{children}</p>
-                <p> We've been trying to reach you about your car's extended warranty ... </p>
+                {/* <p> We've been trying to reach you about your car's extended warranty ... </p> */}
+                <p>Error {errorMessage.errorCode} ({errorMessage.errorReason}): {errorMessage.errorMessage}</p>
             </div>
         </div>
       </div>
