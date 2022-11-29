@@ -9,17 +9,33 @@ import Modal from "../Modal/Modal";
 export default function SearchResults({ vidsArray, setVidsArray }) {
   let { searchTerm } = useParams();
   const [showModal, setShowModal] = useState(false);
-  let errorMessage;
+  const [errorMessage, setErrorMessage] = useState({
+    errorCode: "",
+    errorReason: "",
+    errorMessage: "",
+  });
+  //   let errorMessage;
 
   useEffect(() => {
-    getSearch(searchTerm)
-      .then((data) => setVidsArray(data.items.filter((vid) => vid.id.kind === "youtube#video")))
-      //   .then(console.log)
-      .catch((error) => {
+    getSearch(searchTerm).then((data) => {
+      if (data.error) {
         setShowModal(!showModal);
-        errorMessage = error.message;
-        console.error(error);
-      });
+        setErrorMessage(
+          Object.assign(structuredClone(errorMessage), errorMessage, {
+            errorCode: data.error.code,
+            errorReason: data.error.details[0].reason,
+            errorMessage: data.error.message,
+          })
+        );
+        console.error(data.error.message);
+      }
+      setVidsArray(data.items.filter((vid) => vid.id.kind === "youtube#video"));
+    });
+    //   .then(console.log)
+    //   .catch((error) => {
+    //     console.log(error);
+    //     // errorMessage = error.message;
+    //   });
   }, [searchTerm]);
 
   return (
@@ -42,11 +58,13 @@ export default function SearchResults({ vidsArray, setVidsArray }) {
           );
         })}
       </div>
-      {showModal && (
-        <Modal showModal={showModal} setShowModal={setShowModal}>
-          {errorMessage}
-        </Modal>
-      )}
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        errorMessage={errorMessage}
+      >
+        {/* {errorMessage} */}
+      </Modal>
     </>
   );
 }
