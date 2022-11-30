@@ -28,7 +28,6 @@ a {
   text-decoration: none;
 }
 
-.videoDescrip:hover {
-  color: #870010;
-  text-shadow: 4px 4px #ffe6d0;
+.videoDescrip *:hover {
+  text-shadow: 4px 4px #870010;
 }
