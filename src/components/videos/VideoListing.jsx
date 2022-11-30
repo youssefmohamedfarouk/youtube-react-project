@@ -12,11 +12,11 @@ export default function VideoListing({ vid, url }) {
     <div className="videoDescrip">
       <Link to={`/videos/${vid.id.videoId || vid.id}`}>
         <img src={url} alt={`${vid.id}_img`}></img>
-        <div>
+        <div className="text">
           <h3>{he.decode(vid.snippet.title)}</h3>
         </div>
       </Link>
-      <p>
+      <p className="text">
         {he.decode(vid.snippet.channelTitle)} • {uploaded}
       </p>
     </div>

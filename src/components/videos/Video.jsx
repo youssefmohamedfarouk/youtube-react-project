@@ -33,7 +33,7 @@ export default function Video() {
         origin={"http://localhost:3000"}
         className="youtube-vid"
       />
-      <div>
+      <div className="vid-details">
         <h3>{videoObj.items && videoObj.items[0].snippet.title}</h3>
         <p>{videoObj.items && videoObj.items[0].snippet.channelTitle}</p>
         <p>
@@ -42,7 +42,6 @@ export default function Video() {
             moment(videoObj.items[0].snippet.publishedAt).fromNow()}
         </p>
       </div>
-      <div></div>
     </div>
   );
 }

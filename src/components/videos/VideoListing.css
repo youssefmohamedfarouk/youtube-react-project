@@ -5,10 +5,19 @@ div .VideoListing {
 
 .videoDescrip {
   flex: 1 0 20%; /* explanation below */
-  margin: 20px;
+  margin: 5px;
+  background-color: #ff6b01;
+  border: solid #fdba2d 4px;
+  /* padding: 5px; */
+}
+
+.videoDescrip * {
+  background-color: #ff6b01;
+  color: #ffe6d0;
 }
 
 .video-container {
+  width: 100vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(13, 1fr);
@@ -20,5 +29,5 @@ a {
 }
 
 .videoDescrip:hover {
-    text-decoration: underline;
+  text-shadow: 2px 2px #870010;
 }

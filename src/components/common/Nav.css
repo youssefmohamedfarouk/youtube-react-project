@@ -4,22 +4,22 @@
 
 header {
   align-items: center;
-  background-color: red;
+  background-color: #870010;
   display: flex;
   height: 10%;
   border-bottom-right-radius: 00.5rem;
   border-bottom-left-radius: 00.5rem;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-  width: 100%;
+  width: 100vw;
 }
 
 header * {
-  background-color: red;
+  background-color: #870010;
 }
 
 header img {
-  height: 100%;
+  height: 90%;
   background-color: transparent;
   margin-left: 2%;
 }
