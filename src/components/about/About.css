@@ -83,7 +83,13 @@
   height: 250px;
 }
 
-a {
+.about-carlos a {
   background-color: #ff6b01;
   text-decoration:wavy;
 }
+
+.about-youssef a {
+    background-color: #ff6b01;
+    text-decoration:wavy;
+  }
+
