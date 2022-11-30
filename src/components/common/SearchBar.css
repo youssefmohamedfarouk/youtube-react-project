@@ -1,0 +1,38 @@
+.input-wrapper {
+  margin-top: 82px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fc2125;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  /* box-shadow: 0.25rem 0.25rem 0rem #f0b2a8; */
+}
+
+.input-wrapper * {
+  background: #fc2125;
+  display: flex;
+}
+
+input {
+  width: 100vw;
+  border: none;
+  outline: none;
+  background: #fc2125;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.image-wrapper img{
+    background-color: transparent;
+    height: 20px;
+    margin-right: 10px;
+    filter: invert();
+}
+
+::placeholder {
+  color: #ffffff;
+}

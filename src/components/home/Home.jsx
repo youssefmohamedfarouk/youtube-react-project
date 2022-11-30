@@ -8,16 +8,17 @@ import "../videos/VideoListing.css";
 export default function Home({ vidsArray, setVidsArray }) {
   useEffect(() => {
     setVidsArray([]);
-    getMostPopular().then((data) =>
-      setVidsArray(data.items.filter((vid) => vid.kind === "youtube#video"))
-    );
+    getMostPopular().then((data) => {
+      console.log(data);
+      setVidsArray(data.items.filter((vid) => vid.kind === "youtube#video"));
+    });
   }, []);
 
   return (
     <>
       <div className="video-container">
         {vidsArray.map((vid) => {
-          console.log(vid);
+          //   console.log(vid);
           return (
             <VideoListing
               vid={vid}

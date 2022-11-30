@@ -4,10 +4,11 @@ import "./Nav.css";
 export default function Nav() {
   return (
     <header>
+      <img src="/u2ube-logo.png" alt="NotYoutube" />
       <article>
         <h1>
           <Link to="/">
-            <span>NotYoutube</span>
+            <span>notYouTube</span>
           </Link>
         </h1>
       </article>

@@ -1,51 +1,69 @@
-header {
-    align-items: center;
-    background-color: red;
-    display: flex;
-    padding: 25px 15% 35px;
-    height: 20px;
-  }
-  
-  header article,
-  header nav {
-    width: 50%;
-  }
+.header-wrapper {
+  height: 100%;
+}
 
-  header h1 {
-    height: auto;
-    margin: 0;
-    font-size: 36px;
-  }
-  
-  header h1 span {
-    font-weight: bold;
-  }
-  
-  header h1 a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  header ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  header ul li {
-    display: inline-block;
-    font-size: 18px;
-    padding: 0 25px;
-  }
-  
-  header ul li a {
-    color: white;
-    font-weight: 500;
-    padding-bottom: 5px;
-    text-decoration: none;
-  }
-  
-  header ul li a:hover {
-    color: black;
-    border-bottom: 2px solid black;
-  }
-  
+header {
+  align-items: center;
+  background-color: #870010;
+  display: flex;
+  height: 10%;
+  border-bottom-right-radius: 00.5rem;
+  border-bottom-left-radius: 00.5rem;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100vw;
+}
+
+header * {
+  background-color: #870010;
+}
+
+header img {
+  height: 90%;
+  background-color: transparent;
+  margin-left: 2%;
+}
+
+header article,
+header nav {
+  width: 50%;
+}
+
+header h1 {
+  height: auto;
+  margin: 0;
+  font-size: 36px;
+  margin-left: 5%;
+}
+
+header h1 span {
+  font-weight: bold;
+}
+
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+}
+
+header ul li {
+  float: right;
+  font-size: 18px;
+  padding: 0 25px;
+}
+
+header ul li a {
+  color: white;
+  font-weight: 500;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+header ul li a:hover {
+  color: whitesmoke;
+  border-bottom: 2px solid white;
+}

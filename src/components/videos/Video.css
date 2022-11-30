@@ -1,0 +1,22 @@
+.vid-container {
+    display: grid;
+    grid-template-rows: 2fr 0.5fr 0.5fr;
+}
+
+.vid-container * {
+    background-color: #ff6b01;
+    margin: auto;
+    padding: 15px;
+    color: #ffe6d0;
+    text-shadow: 2px 2px #fdba2d;
+}
+
+.youtube-vid {
+    border-radius: 10px;
+    margin-top: 1%;
+}
+
+.vid-details {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
