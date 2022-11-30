@@ -1,14 +1,87 @@
-.about {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 0.5fr 1fr 1fr;
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr;
 }
 
-h1 {
-    margin-left: 2%;
+* {
+    color: #ffe6d0;
+    text-shadow: 2px 2px #870010;
+
 }
 
 .project-description {
-    margin-left: 2%;
-    width: 80vw;
+  margin: auto;
+  width: 90%;
+  align-items: center;
+
+  justify-content: center;
+  grid-column: 1 / span end;
+  background-color: #ff6b01;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.project-description * {
+    padding-left: 20px;
+    padding-right: 20px;
+  background-color: #ff6b01;
+
+}
+
+.project-description p {
+    padding-bottom: 20px;
+
+}
+
+/* .about {
+  grid-row: 2/3;
+} */
+
+.about-carlos {
+  grid-row: 2/3;
+  grid-column: 1 / 2;
+}
+
+.about-carlos p {
+  width: 80%;
+  margin: auto;
+  background-color: #ff6b01;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about-youssef {
+  grid-row: 2/3;
+  grid-column: 2 / 3;
+}
+
+.about-youssef p {
+  width: 80%;
+  margin: auto;
+  background-color: #ff6b01;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about-youssef img {
+  background-color: #ff6b01;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: block;
+  justify-content: center;
+  margin: auto;
+  height: 250px;
+}
+
+.about-carlos img {
+  background-color: #ff6b01;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: block;
+  justify-content: center;
+  margin: auto;
+  height: 250px;
 }
