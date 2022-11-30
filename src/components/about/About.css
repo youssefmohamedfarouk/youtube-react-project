@@ -5,9 +5,8 @@
 }
 
 * {
-    color: #ffe6d0;
-    text-shadow: 2px 2px #870010;
-
+  color: #ffe6d0;
+  text-shadow: 2px 2px #870010;
 }
 
 .project-description {
@@ -23,15 +22,13 @@
 }
 
 .project-description * {
-    padding-left: 20px;
-    padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #ff6b01;
-
 }
 
 .project-description p {
-    padding-bottom: 20px;
-
+  padding-bottom: 20px;
 }
 
 /* .about {
@@ -84,4 +81,9 @@
   justify-content: center;
   margin: auto;
   height: 250px;
+}
+
+a {
+  background-color: #ff6b01;
+  text-decoration:wavy;
 }

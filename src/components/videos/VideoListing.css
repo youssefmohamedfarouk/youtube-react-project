@@ -29,5 +29,6 @@ a {
 }
 
 .videoDescrip:hover {
-  text-shadow: 2px 2px #870010;
+  color: #870010;
+  text-shadow: 4px 4px #ffe6d0;
 }
